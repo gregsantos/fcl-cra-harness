@@ -18,12 +18,16 @@ export const CMD = async () => {
   const acctProof = serviceOfType(res.services, "account-proof")
   if (acctProof) {
     const {address, timestamp, appDomainTag, signatures} = acctProof.data
-
     const msg = WalletUtils.encodeMessageForProvableAuthnVerifying(
       address,
       timestamp,
       appDomainTag
     )
-    return await fcl.verifyUserSignatures(msg, signatures).then(console.log)
+    const compSigs = signatures.map(
+      ({addr, keyId, signature}) =>
+        new WalletUtils.CompositeSignature(addr, keyId, signature)
+    )
+
+    return await fcl.verifyUserSignatures(msg, compSigs).then(console.log)
   }
 }

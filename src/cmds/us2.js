@@ -8,14 +8,18 @@ const toHexStr = str => {
 export const LABEL = "User Sign & Verify"
 export const CMD = async () => {
   const MSG = toHexStr("FOO")
-  // prettier-ignore
-  const res = await fcl.currentUser()
-    .signUserMessage(MSG)
-    .then(yup("US-1"))
-    .then(res => res)
-    .catch(nope("US-1"))
-
+  let res
+  try {
+    res = await fcl.currentUser().signUserMessage(MSG)
+  } catch (error) {
+    console.log(error)
+  }
+  yup("User Sign", res)
   if (typeof res === "string") return
-
-  return await fcl.verifyUserSignatures(MSG, res).then(console.log)
+  if (res)
+    try {
+      return await fcl.verifyUserSignatures(MSG, res).then(console.log)
+    } catch (error) {
+      console.log(error)
+    }
 }

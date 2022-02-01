@@ -13,4 +13,5 @@ window.addEventListener("FLOW::TX", d => {
 
 window.addEventListener("message", d => {
   console.log("Harness Message Received", d.data)
+  return
 })
