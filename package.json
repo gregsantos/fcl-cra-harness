@@ -1,9 +1,11 @@
 {
-  "name": "harness",
+  "name": "fcl-harness",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@onflow/fcl": "^0.0.78",
+    "@onflow/fcl": "0.0.79-alpha.4",
+    "@onflow/transport-grpc": "^0.0.3-alpha.0",
+    "@onflow/transport-http": "^0.0.6",
     "@onflow/util-encode-key": "^0.0.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

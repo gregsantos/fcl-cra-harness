@@ -1444,14 +1444,14 @@
     "mkdirp" "^1.0.4"
     "rimraf" "^3.0.2"
 
-"@onflow/fcl@^0.0.78":
-  "integrity" "sha512-zWtzCjG2URWXLblSsXiSKr3qBroq2BSVGsZrWeosbmup/03fb/MJ10w3ECF83Cd2m/M0TevSSp+hcpdBVLZSfw=="
-  "resolved" "https://registry.npmjs.org/@onflow/fcl/-/fcl-0.0.78.tgz"
-  "version" "0.0.78"
+"@onflow/fcl@0.0.79-alpha.4":
+  "integrity" "sha512-FVwqeZvAYCAGCVu7YRoctqedU54xkeTN76a5NapdYHGXgl+Clo6k1uz3P5zW0kRTMTrNN2YqI6UDiie7DveNtw=="
+  "resolved" "https://registry.npmjs.org/@onflow/fcl/-/fcl-0.0.79-alpha.4.tgz"
+  "version" "0.0.79-alpha.4"
   dependencies:
     "@onflow/interaction" "0.0.11"
     "@onflow/rlp" "0.0.3"
-    "@onflow/sdk" "0.0.56"
+    "@onflow/sdk" "^0.0.57-alpha.4"
     "@onflow/types" "0.0.6"
     "@onflow/util-actor" "0.0.2"
     "@onflow/util-address" "0.0.0"
@@ -1477,14 +1477,11 @@
   "resolved" "https://registry.npmjs.org/@onflow/rlp/-/rlp-0.0.3.tgz"
   "version" "0.0.3"
 
-"@onflow/sdk@0.0.56":
-  "integrity" "sha512-yYOE+5Tvgprqo01vSxIgYTu4fO6sDFfyueVYFgzXx/F0fdHqy0zfAq+gEVjtWG+LvVD/YvR8eRbcBpfvXu1USA=="
-  "resolved" "https://registry.npmjs.org/@onflow/sdk/-/sdk-0.0.56.tgz"
-  "version" "0.0.56"
+"@onflow/sdk@^0.0.57-alpha.4":
+  "integrity" "sha512-SlVMV9UIx6M78I9simIDt3EWAtwqfpY44zht94SYeob1tYlqv6tU+noGyvK6t5EmbiDG/dOcrgdzKKMqknVRUA=="
+  "resolved" "https://registry.npmjs.org/@onflow/sdk/-/sdk-0.0.57-pain.0.tgz"
+  "version" "0.0.57-pain.0"
   dependencies:
-    "@improbable-eng/grpc-web" "^0.14.0"
-    "@improbable-eng/grpc-web-node-http-transport" "^0.14.0"
-    "@onflow/protobuf" "^0.1.8"
     "@onflow/rlp" "^0.0.3"
     "@onflow/util-actor" "0.0.2"
     "@onflow/util-address" "^0.0.0"
@@ -1492,6 +1489,28 @@
     "@onflow/util-template" "0.0.1"
     "deepmerge" "^4.2.2"
     "sha3" "^2.1.4"
+
+"@onflow/transport-grpc@^0.0.3-alpha.0":
+  "integrity" "sha512-kphu3few/qh8b/Ae7Of0Sj3EVrwkTzuJoBIVzZXXepn74Eo8k8gJh8FMqCsHHUjYxLGD/DhmH+aP/kpcEt678g=="
+  "resolved" "https://registry.npmjs.org/@onflow/transport-grpc/-/transport-grpc-0.0.3-pain.0.tgz"
+  "version" "0.0.3-pain.0"
+  dependencies:
+    "@improbable-eng/grpc-web" "^0.14.0"
+    "@improbable-eng/grpc-web-node-http-transport" "^0.14.0"
+    "@onflow/protobuf" "^0.1.8"
+    "@onflow/rlp" "^0.0.3"
+    "@onflow/util-address" "^0.0.0"
+    "@onflow/util-invariant" "^0.0.0"
+    "@onflow/util-template" "0.0.1"
+
+"@onflow/transport-http@^0.0.6":
+  "integrity" "sha512-KOmA6h00O3EARMd+mW6wkxnKgJvjHt2KdXJzeCczgf/LOxXYIAFagbaJtJt3ljwCnIYQRjm6iy2YZutehg6cHw=="
+  "resolved" "https://registry.npmjs.org/@onflow/transport-http/-/transport-http-0.0.6.tgz"
+  "version" "0.0.6"
+  dependencies:
+    "@onflow/util-address" "^0.0.0"
+    "@onflow/util-invariant" "^0.0.0"
+    "@onflow/util-template" "0.0.1"
 
 "@onflow/types@0.0.6":
   "integrity" "sha512-2eBrmqiFO37EUOJvzksygP8Wu6lL/m9az36AF0qYdGQW/79KGCHBCchUsIzxyGt8UDXl/dgnIcMkiTH7tWZqXg=="

@@ -1,13 +1,9 @@
 import * as fcl from "@onflow/fcl"
+import {send as grpcSend} from "@onflow/transport-grpc"
+import {send as httpSend} from "@onflow/transport-http"
 
 const USE_LOCAL = false
-const isServerSide = () => typeof window === "undefined"
 
-const LOCAL_STORAGE = {
-  can: !isServerSide(),
-  get: async key => JSON.parse(localStorage.getItem(key)),
-  put: async (key, value) => localStorage.setItem(key, JSON.stringify(value)),
-}
 // prettier-ignore
 fcl.config()
   .put("app.detail.title", "Test Harness")
@@ -19,27 +15,38 @@ if (USE_LOCAL) {
   fcl
     .config()
     .put("env", "local")
+    .put("debug.accounts", true)
+    .put("logger.level", 2)
     .put("accessNode.api", "http://localhost:8080")
     .put("discovery.wallet", "http://localhost:8701/fcl/authn")
-    .put("discovery.wallet.method", "IFRAME/RPC")
+    .put("sdk.transport", grpcSend)
     .put("debug.accounts", true)
-    // new discovery API
-    //.put("discovery.authn.include", ["0x9d2e44203cb13051"])
-    //.put("discovery.authn.endpoint", "http://localhost:3002/api/testnet/authn")
-    .put("fcl.appDomainTag", "AWESOME-APP-V0.0-user")
+    .put("fcl.accountProof.resolver", async () => ({
+      appIdentifier: "test app",
+      nonce: "3037366134636339643564623330316636626239323161663465346131393662",
+    }))
+  // Discovery API
+  //.put("discovery.authn.include", ["0x9d2e44203cb13051"])
+  //.put("discovery.authn.endpoint", "http://localhost:3002/api/testnet/authn")
 } else {
   // prettier-ignore
   fcl
     .config()
+    // testnet
     .put("env", "testnet")
-    .put("accessNode.api", "https://access-testnet.onflow.org")
+    // .put("debug.accounts", true)
+    .put("accessNode.api", "https://rest-testnet.onflow.org")
     .put("discovery.wallet", "https://fcl-discovery.onflow.org/testnet/authn")
-    // .put("sdk.transport", grpcSend)
-    .put("debug.accounts", true)
-    //.put("discovery.wallet.method", "EXT/RPC")
-    .put("fcl.appDomainTag", "AWESOME-APP-V0.0-user")
+    .put("sdk.transport", httpSend)
+    .put("fcl.accountProof.resolver", async () => ({
+      appIdentifier: "test app",
+      nonce: "3037366134636339643564623330316636626239323161663465346131393662",
+    }))
+  // grpc
+  // .put("accessNode.api", "https://access-testnet.onflow.org")
+  // .put("sdk.transport", grpcSend)
   // mainnet
+  // .put("env", "mainnet")
   //.put("accessNode.api", "https://access-mainnet-beta.onflow.org")
   //.put("discovery.wallet", "https://fcl-discovery.onflow.org/authn")
-  // .put("fcl.storage", LOCAL_STORAGE)
 }

@@ -1,5 +1,4 @@
-import * as fcl from "@onflow/fcl"
-import {useState, useEffect} from "react"
+import {useState} from "react"
 import "./config"
 import "./decorate"
 import {COMMANDS} from "./cmds"
