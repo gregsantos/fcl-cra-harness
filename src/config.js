@@ -2,7 +2,11 @@ import * as fcl from "@onflow/fcl"
 import {send as grpcSend} from "@onflow/transport-grpc"
 import {send as httpSend} from "@onflow/transport-http"
 
-const USE_LOCAL = false
+const USE_LOCAL = true
+const resolver = async () => ({
+  appIdentifier: "Awesome App (v0.0)",
+  nonce: "3037366134636339643564623330316636626239323161663465346131393662",
+})
 
 // prettier-ignore
 fcl.config()
@@ -21,10 +25,7 @@ if (USE_LOCAL) {
     .put("discovery.wallet", "http://localhost:8701/fcl/authn")
     .put("sdk.transport", grpcSend)
     .put("debug.accounts", true)
-    .put("fcl.accountProof.resolver", async () => ({
-      appIdentifier: "test app",
-      nonce: "3037366134636339643564623330316636626239323161663465346131393662",
-    }))
+    .put("fcl.accountProof.resolver", resolver)
   // Discovery API
   //.put("discovery.authn.include", ["0x9d2e44203cb13051"])
   //.put("discovery.authn.endpoint", "http://localhost:3002/api/testnet/authn")
@@ -38,10 +39,7 @@ if (USE_LOCAL) {
     .put("accessNode.api", "https://rest-testnet.onflow.org")
     .put("discovery.wallet", "https://fcl-discovery.onflow.org/testnet/authn")
     .put("sdk.transport", httpSend)
-    .put("fcl.accountProof.resolver", async () => ({
-      appIdentifier: "test app",
-      nonce: "3037366134636339643564623330316636626239323161663465346131393662",
-    }))
+    .put("fcl.accountProof.resolver", resolver)
   // grpc
   // .put("accessNode.api", "https://access-testnet.onflow.org")
   // .put("sdk.transport", grpcSend)
