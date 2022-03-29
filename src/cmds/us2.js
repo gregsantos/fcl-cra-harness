@@ -1,5 +1,4 @@
 import * as fcl from "@onflow/fcl"
-import {yup, nope} from "../util"
 
 const toHexStr = str => {
   return Buffer.from(str).toString("hex")
@@ -14,7 +13,6 @@ export const CMD = async () => {
   } catch (error) {
     console.log(error)
   }
-  yup("User Sign", res)
   if (typeof res === "string") return
   if (res)
     try {

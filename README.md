@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# FCL Harness App
+
+A simple app to illustrate basic features of the Flow Client Library (FCL).
+These include:
+
+- User authentication and authorization
+- Querying and mutating the Flow Blockchain
+- User signing of messages (with onchain verification)
+
+## Learn More
+
+- [FCL Authentication](https://docs.onflow.org/fcl/reference/authentication/)
+- [Flow App Quickstart](https://docs.onflow.org/fcl/tutorials/flow-app-quickstart)
+- [Flow Client Library (FCL) API Quick Reference](https://docs.onflow.org/fcl/reference/api/)
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Run `yarn install` to install FCL and its dependencies
+
+## Configuration
+
+FCL has a mechanism that lets you configure various aspects of FCL.
+`./config.js` contains basic configuration information for FCL, such as what Access Node and wallet discovery endpoint to use (e.g. testnet or a local emulator).Configuration is
+imported in `./root.js` (it's recommended you do as early in the life cycle as possible), and made available via the `useConfig` hook.
+
+### Required config values
+
+- accessNode.api -- Api URL for the Flow Blockchain Access Node you want to be communicating with.
+- discovery.wallet -- Points FCL at the Wallet or Wallet Discovery mechanism.
+
+📣 Tip: It's recommend to replace these values with environment variables for easy deployments across different environments like development/production or Testnet/Mainnet.
+
+Learn more about configuration values [here](https://docs.onflow.org/fcl/reference/configure-fcl/)
+
+## Hooks
+
+- useConfig
+- useCurrentUser
 
 ## Available Scripts
 
@@ -42,29 +79,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

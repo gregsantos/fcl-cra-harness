@@ -26,9 +26,6 @@ if (USE_LOCAL) {
     .put("sdk.transport", grpcSend)
     .put("debug.accounts", true)
     .put("fcl.accountProof.resolver", resolver)
-  // Discovery API
-  //.put("discovery.authn.include", ["0x9d2e44203cb13051"])
-  //.put("discovery.authn.endpoint", "http://localhost:3002/api/testnet/authn")
 } else {
   // prettier-ignore
   fcl
@@ -38,6 +35,9 @@ if (USE_LOCAL) {
     // .put("debug.accounts", true)
     .put("accessNode.api", "https://rest-testnet.onflow.org")
     .put("discovery.wallet", "https://fcl-discovery.onflow.org/testnet/authn")
+    // Discovery API
+    //.put("discovery.authn.include", ["0x9d2e44203cb13051"])
+    //.put("discovery.authn.endpoint", "https://fcl-discovery.onflow.org/api/testnet/authn")
     .put("sdk.transport", httpSend)
     .put("fcl.accountProof.resolver", resolver)
   // grpc
@@ -45,6 +45,6 @@ if (USE_LOCAL) {
   // .put("sdk.transport", grpcSend)
   // mainnet
   // .put("env", "mainnet")
-  //.put("accessNode.api", "https://access-mainnet-beta.onflow.org")
-  //.put("discovery.wallet", "https://fcl-discovery.onflow.org/authn")
+  // .put("accessNode.api", "https://access-mainnet-beta.onflow.org")
+  // .put("discovery.wallet", "https://fcl-discovery.onflow.org/authn")
 }
