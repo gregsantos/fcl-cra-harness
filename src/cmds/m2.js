@@ -6,7 +6,7 @@ export const CMD = async () => {
   // prettier-ignore
   return mutate({
     cadence: `
-      transaction(a: Int, b: Int, c: Address) {
+      transaction(a: String, b: String, c: Address) {
         prepare(acct: AuthAccount) {
           log(acct)
           log(a)
@@ -16,11 +16,12 @@ export const CMD = async () => {
       }
     `,
     args: (arg, t) => [
-      arg(6, t.Int),
-      arg(7, t.Int),
+      arg("6", t.String),
+      arg("7", t.String),
       arg("0xba1132bc08f82fe2", t.Address),
     ],
     limit: 50,
-  }).then(yup("M-1"))
+  })
+    .then(yup("M-1"))
     .catch(nope("M-1"))
 }
