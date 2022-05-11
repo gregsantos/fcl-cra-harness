@@ -11,10 +11,17 @@ export const CMD = async () => {
     .catch(nope("US-1"))
 
   const accountProofService = serviceOfType(res.services, "account-proof")
+
   if (accountProofService) {
+    const fclCryptoContract =
+      (await fcl.config.first(["env", "flow.network"])) === "local"
+        ? process.env.REACT_APP_FCL_CRYPTO_CONTRACT
+        : null
+
     const verified = await fcl.AppUtils.verifyAccountProof(
       "Awesome App (v0.0)",
-      accountProofService.data
+      accountProofService.data,
+      {fclCryptoContract}
     )
     console.log("Verified Account", verified)
   }

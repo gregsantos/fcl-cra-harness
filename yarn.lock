@@ -1383,111 +1383,110 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@onflow/fcl@file:../fcl-js/packages/fcl":
-  "resolved" "file:../fcl-js/packages/fcl"
-  "version" "1.0.0-alpha.1"
+"@onflow/config@^1.0.0":
+  "integrity" "sha512-fiUTqZzU1fFBGlUVvlm2sWtHelDcaWKp7MYJS37FJLxZyYITf8dzBFOppJ7ciIsRZ9eB2qBmqc+kOhR1lsiEUQ=="
+  "resolved" "https://registry.npmjs.org/@onflow/config/-/config-1.0.0.tgz"
+  "version" "1.0.0"
   dependencies:
+    "@onflow/util-actor" "^1.0.0"
+
+"@onflow/fcl@^1.0.0":
+  "integrity" "sha512-8Lz2petdN6oIvOLTUCw/DnL/aH7dbBWM8LMfAHaUI7mbimIhfFpoYx1zc67XPFJ376Xj5+asjIVSNUj4802FMg=="
+  "resolved" "https://registry.npmjs.org/@onflow/fcl/-/fcl-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "@onflow/config" "^1.0.0"
     "@onflow/interaction" "0.0.11"
-    "@onflow/rlp" "^1.0.0-alpha.0"
-    "@onflow/sdk" "^1.0.0-alpha.0"
-    "@onflow/types" "^1.0.0-alpha.0"
-    "@onflow/util-actor" "^1.0.0-alpha.0"
-    "@onflow/util-address" "^1.0.0-alpha.0"
-    "@onflow/util-invariant" "^1.0.0-alpha.0"
-    "@onflow/util-template" "^1.0.0-alpha.0"
-    "@onflow/util-uid" "^1.0.0-alpha.0"
+    "@onflow/rlp" "^1.0.0"
+    "@onflow/sdk" "^1.0.0"
+    "@onflow/types" "^1.0.0"
+    "@onflow/util-actor" "^1.0.0"
+    "@onflow/util-address" "^1.0.0"
+    "@onflow/util-invariant" "^1.0.0"
+    "@onflow/util-template" "^1.0.0"
+    "@onflow/util-uid" "^1.0.0"
 
-"@onflow/protobuf@file:../fcl-js/packages/protobuf":
-  "resolved" "file:../fcl-js/packages/protobuf"
-  "version" "1.0.0-alpha.0"
-  dependencies:
-    "@improbable-eng/grpc-web" "^0.12.0"
-    "elliptic" "^6.5.4"
-    "google-protobuf" "^3.11.4"
+"@onflow/interaction@0.0.11":
+  "integrity" "sha512-Xuq1Mmx6Wyba/F/L+QLQs0yJeQDsIDwy5SKk5vrCuVgIj0yD8k506g5L8ODrbM1LWll8i0tQsoOi0F85vNl5sA=="
+  "resolved" "https://registry.npmjs.org/@onflow/interaction/-/interaction-0.0.11.tgz"
+  "version" "0.0.11"
 
-"@onflow/rlp@file:../fcl-js/packages/rlp":
-  "resolved" "file:../fcl-js/packages/rlp"
-  "version" "1.0.0-alpha.0"
+"@onflow/rlp@^1.0.0":
+  "integrity" "sha512-BvwCePMGKe1dAIM5oE550Ijefm3ExandkT/LqHS05NgoFSRr38pkUiJDOvuuTShWI+39e9fKOY/p1tjn4vQjbw=="
+  "resolved" "https://registry.npmjs.org/@onflow/rlp/-/rlp-1.0.0.tgz"
+  "version" "1.0.0"
   dependencies:
     "buffer" "^6.0.3"
 
-"@onflow/sdk@file:../fcl-js/packages/sdk":
-  "resolved" "file:../fcl-js/packages/sdk"
-  "version" "1.0.0-alpha.0"
+"@onflow/sdk@^1.0.0":
+  "integrity" "sha512-n+BJHoJreR9XHVdhtZdfzYbL/2ZqwCXi3h2OwARLuGvtR9Sy80gryWwYHz3moKqSEcFgwOzA9h6SKRFiPNDLaQ=="
+  "resolved" "https://registry.npmjs.org/@onflow/sdk/-/sdk-1.0.0.tgz"
+  "version" "1.0.0"
   dependencies:
-    "@onflow/rlp" "^1.0.0-alpha.0"
-    "@onflow/transport-http" "^1.0.0-alpha.0"
-    "@onflow/util-actor" "^1.0.0-alpha.0"
-    "@onflow/util-address" "^1.0.0-alpha.0"
-    "@onflow/util-invariant" "^1.0.0-alpha.0"
-    "@onflow/util-logger" "^1.0.0-alpha.0"
-    "@onflow/util-template" "^1.0.0-alpha.0"
+    "@onflow/config" "^1.0.0"
+    "@onflow/rlp" "^1.0.0"
+    "@onflow/transport-http" "^1.0.0"
+    "@onflow/util-actor" "^1.0.0"
+    "@onflow/util-address" "^1.0.0"
+    "@onflow/util-invariant" "^1.0.0"
+    "@onflow/util-logger" "^1.0.0"
+    "@onflow/util-template" "^1.0.0"
     "deepmerge" "^4.2.2"
     "sha3" "^2.1.4"
 
-"@onflow/transport-grpc@file:../fcl-js/packages/transport-grpc":
-  "resolved" "file:../fcl-js/packages/transport-grpc"
-  "version" "1.0.0-alpha.1"
+"@onflow/transport-http@^1.0.0":
+  "integrity" "sha512-WZenDqUwEGMcPl0B6IBUOKzgTwkW7pDQ3WHF4iuBVDYKbVNlyV7fQX1/5w9xtaCcExCk0LAdgY8tJXegkFHf8A=="
+  "resolved" "https://registry.npmjs.org/@onflow/transport-http/-/transport-http-1.0.0.tgz"
+  "version" "1.0.0"
   dependencies:
-    "@improbable-eng/grpc-web" "^0.14.0"
-    "@improbable-eng/grpc-web-node-http-transport" "^0.14.0"
-    "@onflow/protobuf" "^1.0.0-alpha.0"
-    "@onflow/rlp" "^1.0.0-alpha.0"
-    "@onflow/util-address" "^1.0.0-alpha.0"
-    "@onflow/util-invariant" "^1.0.0-alpha.0"
-    "@onflow/util-template" "^1.0.0-alpha.0"
+    "@onflow/util-address" "^1.0.0"
+    "@onflow/util-invariant" "^1.0.0"
+    "@onflow/util-node-http-modules" "^1.0.0"
+    "@onflow/util-template" "^1.0.0"
 
-"@onflow/transport-http@file:../fcl-js/packages/transport-http":
-  "resolved" "file:../fcl-js/packages/transport-http"
-  "version" "1.0.0-alpha.0"
-  dependencies:
-    "@onflow/util-address" "^1.0.0-alpha.0"
-    "@onflow/util-invariant" "^1.0.0-alpha.0"
-    "@onflow/util-node-http-modules" "^1.0.0-alpha.0"
-    "@onflow/util-template" "^1.0.0-alpha.0"
+"@onflow/types@^1.0.0":
+  "integrity" "sha512-VD6txEVRz+oVn8o5+msXD5dL6zYVbPPtHEJdWWsD0AHKQRStEot+SVUI4dSYX7eNZ7R1WJ5PI9O5fTvdK0+jdg=="
+  "resolved" "https://registry.npmjs.org/@onflow/types/-/types-1.0.0.tgz"
+  "version" "1.0.0"
 
-"@onflow/types@file:../fcl-js/packages/types":
-  "resolved" "file:../fcl-js/packages/types"
-  "version" "1.0.0-alpha.0"
-
-"@onflow/util-actor@file:../fcl-js/packages/util-actor":
-  "resolved" "file:../fcl-js/packages/util-actor"
-  "version" "1.0.0-alpha.0"
+"@onflow/util-actor@^1.0.0":
+  "integrity" "sha512-yPRqgDSfEHNTs21lPsTFynfkzvydYy2gsCR2X67VdSFLeNgx2kZ+ZOIDFztM7CO98+EMgdFBJ2RFX7PBHRPCMw=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-actor/-/util-actor-1.0.0.tgz"
+  "version" "1.0.0"
   dependencies:
     "queue-microtask" "1.1.2"
 
-"@onflow/util-address@file:../fcl-js/packages/util-address":
-  "resolved" "file:../fcl-js/packages/util-address"
-  "version" "1.0.0-alpha.0"
+"@onflow/util-address@^1.0.0":
+  "integrity" "sha512-5gzo/5QwpHFPH+69vpnx3bl75chZWO+UMe8kd5oaDKH9mSlyhDS0ZV0ucyYF1s1X1m3RCrSGh51b1Qbgv91DxQ=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-address/-/util-address-1.0.0.tgz"
+  "version" "1.0.0"
 
-"@onflow/util-encode-key@file:../fcl-js/packages/util-encode-key":
-  "resolved" "file:../fcl-js/packages/util-encode-key"
-  "version" "1.0.0-alpha.0"
+"@onflow/util-invariant@^1.0.0":
+  "integrity" "sha512-SWU3eTc/GZS8CiJqJD0p2Spcholddp5hGLd/19W60wDNhXrQ0okuOyfh3OxhoRsEyjvQBOXzdMHuIYf7O6xpVg=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-invariant/-/util-invariant-1.0.0.tgz"
+  "version" "1.0.0"
+
+"@onflow/util-logger@^1.0.0":
+  "integrity" "sha512-Q5fU1dg0+SE7PB4Sgwxk0TIbbv+jEcEN6452/aaHacFxmEVn+7JngF7PgL1LSjutXJD8xdw/CxDNZ6NpzOY+Fw=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-logger/-/util-logger-1.0.0.tgz"
+  "version" "1.0.0"
   dependencies:
-    "@onflow/rlp" "^1.0.0-alpha.0"
-    "@onflow/util-invariant" "^1.0.0-alpha.0"
+    "@onflow/sdk" "^1.0.0"
 
-"@onflow/util-invariant@file:../fcl-js/packages/util-invariant":
-  "resolved" "file:../fcl-js/packages/util-invariant"
-  "version" "1.0.0-alpha.0"
+"@onflow/util-node-http-modules@^1.0.0":
+  "integrity" "sha512-wREbESQPbOQPKhM5vrQldRlfcUoKYT3tmV76gxwclOBHPLEL7wlUVip1jWnX+sIG/MqVAIwAa/YU8a3DtehUpQ=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-node-http-modules/-/util-node-http-modules-1.0.0.tgz"
+  "version" "1.0.0"
 
-"@onflow/util-logger@file:../fcl-js/packages/util-logger":
-  "resolved" "file:../fcl-js/packages/util-logger"
-  "version" "1.0.0-alpha.0"
-  dependencies:
-    "@onflow/sdk" "^1.0.0-alpha.0"
+"@onflow/util-template@^1.0.0":
+  "integrity" "sha512-ZjaAh7OS4ce2/xn8qcRld/vs/tEGT5bE0vkH7zdKFL/rglkXFhtvTBjQik4g26w+DLoW3TUQSlEp2SuZhu8ctg=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-template/-/util-template-1.0.0.tgz"
+  "version" "1.0.0"
 
-"@onflow/util-node-http-modules@file:../fcl-js/packages/util-node-http-modules":
-  "resolved" "file:../fcl-js/packages/util-node-http-modules"
-  "version" "1.0.0-alpha.0"
-
-"@onflow/util-template@file:../fcl-js/packages/util-template":
-  "resolved" "file:../fcl-js/packages/util-template"
-  "version" "1.0.0-alpha.0"
-
-"@onflow/util-uid@file:../fcl-js/packages/util-uid":
-  "resolved" "file:../fcl-js/packages/util-uid"
-  "version" "1.0.0-alpha.0"
+"@onflow/util-uid@^1.0.0":
+  "integrity" "sha512-UYYfmbrIn36Fa0oBqwWjrfR9patl3SHCV0BEeEPBCZ9waWmW/uLAfKlAzx9bbTXC2vOtivtHkY5EY5TU7A/Q8A=="
+  "resolved" "https://registry.npmjs.org/@onflow/util-uid/-/util-uid-1.0.0.tgz"
+  "version" "1.0.0"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   "integrity" "sha512-RbG7h6TuP6nFFYKJwbcToA1rjC1FyPg25NR2noAZ0vKI+la01KTSRPkuVPE+U88jXv7javx2JHglUcL1MHcshQ=="
@@ -2824,7 +2823,7 @@
   "resolved" "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz"
   "version" "1.1.2"
 
-"buffer@^6.0.3":
+"buffer@^6.0.3", "buffer@6.0.3":
   "integrity" "sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA=="
   "resolved" "https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz"
   "version" "6.0.3"
@@ -7060,6 +7059,11 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
+"queue-microtask@1.1.2":
+  "integrity" "sha512-F9wwNePtXrzZenAB3ax0Y8TSKGvuB7Qw16J30hspEUTbfUM+H827XyN3rlpwhVmtm5wuZtbKIHjOnwDn7MUxWQ=="
+  "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.1.2.tgz"
+  "version" "1.1.2"
+
 "quick-lru@^5.1.1":
   "integrity" "sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA=="
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
@@ -7656,6 +7660,13 @@
   "integrity" "sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw=="
   "resolved" "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz"
   "version" "1.2.0"
+
+"sha3@^2.1.4":
+  "integrity" "sha512-S8cNxbyb0UGUM2VhRD4Poe5N58gJnJsLJ5vC7FYWGUmGhcsj4++WaIOBFVDxlG0W3To6xBuiRh+i0Qp2oNCOtg=="
+  "resolved" "https://registry.npmjs.org/sha3/-/sha3-2.1.4.tgz"
+  "version" "2.1.4"
+  dependencies:
+    "buffer" "6.0.3"
 
 "shebang-command@^2.0.0":
   "integrity" "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA=="
